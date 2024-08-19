@@ -20,7 +20,7 @@ class BilingualDataset(Dataset):
         self.eos_token = torch.tensor([tokenizer_tgt.token_to_id("[EOS]")], dtype = torch.int64)
         self.pad_token = torch.tensor([tokenizer_tgt.token_to_id("[PAD]")], dtype = torch.int64)
         
-    def __len__(self,ds):
+    def __len__(self):
         return len(self.ds)
     
     def __getitem__(self, idx) -> Any:
